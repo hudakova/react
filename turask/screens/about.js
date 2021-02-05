@@ -4,11 +4,12 @@ import TodoItem from '../components/todoItem';
 import AddTodo from '../components/addTodo';
 import AsyncStorage from '@react-native-community/async-storage';
 import { initial } from 'react-native/Libraries/Animated/src/Easing';
+import { useTranslation } from 'react-i18next';
 
 
 export default function About(){
 
-    
+    const { t, i18n } = useTranslation();
 
     const [todos, setTodos] = useState(() => {
         var initial = [
@@ -48,8 +49,8 @@ export default function About(){
             AsyncStorage.setItem(key, text);
         }
         else{
-            Alert.alert('oops', 'todo must be over 3 chars long',[
-                {text: 'Understood', onPress: () => console.log('alert closed')}
+            Alert.alert('oops', t('word must be over 3 chars long'),[
+                {text: t('Understood'), onPress: () => console.log('alert closed')}
             ]);
         }
         

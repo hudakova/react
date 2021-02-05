@@ -5,10 +5,14 @@ import MapViewDirections from 'react-native-maps-directions';
 
 
 export default function Map() {
-  /*const origin = {origin};
+  const origin = {latitude: 49.166440282228955, longitude: 20.13141653100582};
   const destination = {latitude: 37.771707, longitude: -122.4053769};
-  const GOOGLE_MAPS_APIKEY = 'AIzaSyCo5wljrXiQIk7zcOO3p4fTWkwjDA3LA1k';*/
+  const GOOGLE_MAPS_APIKEY = 'AIzaSyCo5wljrXiQIk7zcOO3p4fTWkwjDA3LA1k';
   //var db = openDatabase({ name: 'UserDatabase.db' });
+  const coordinates = [
+    {latitude: 49.166440282228955, longitude: 20.13141653100582},
+    {latitude: 48.779937889116475, longitude:18.577838319747922 }
+  ]
 
   const [location, setLocation] = useState({
     initialPosition: {
@@ -47,7 +51,15 @@ export default function Map() {
       style={styles.mapStyle}
       initialRegion={{latitude: 48.79385986909311, longitude:19.611261334108423 , latitudeDelta: 5, longitudeDelta: 5}}
       
+  
     >
+      <MapViewDirections
+        origin={coordinates[0]}
+        destination={coordinates[1]}
+        apikey={GOOGLE_MAPS_APIKEY}
+        strokeWidth={3}
+        strokeColor="hotpink"
+      />
       <MapView.Marker coordinate={location.markerPosition} />
       
       <MapView.Marker coordinate={{latitude: 49.166440282228955, longitude: 20.13141653100582 }} pinColor='blue'/>
@@ -60,13 +72,9 @@ export default function Map() {
       <MapView.Marker coordinate={{latitude: 48.779937889116475, longitude:18.577838319747922 }} pinColor='orange'/>
     </MapView>//,
    
-    /*<MapViewDirections
-      origin={location.markerPosition}
-      destination={{latitude: 48.73034, longitude: 21.24576, }}
-      apikey={GOOGLE_MAPS_APIKEY}
-      strokeWidth={3}
-      strokeColor="hotpink"
-    />*/
+    /*<MapView initialRegion={…}>
+  
+</MapView>*/
   
   )
 }
@@ -75,5 +83,6 @@ const styles = StyleSheet.create({
   mapStyle: {
     width: Dimensions.get("window").width,
     height: Dimensions.get("window").height,
+    
   },
 });

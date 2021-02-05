@@ -18,7 +18,8 @@ const screens = {
 const MapStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
         headerTintColor: '#fff',
-        headerStyle: {backgroundColor: '#686868', height: 80}
+        headerStyle: {backgroundColor: '#686868', height: 80},
+       
     }
 });
 

@@ -10,6 +10,7 @@ import Map from '../screens/map';
 //import { Left } from 'native-base';
 
 
+
 const screens = {
 
     Login: {
@@ -26,7 +27,7 @@ const screens = {
         navigationOptions: ({ navigation }) => {
             return {
                 headerShown: false,
-                headerTitle: () => <Header navigation={navigation} title='Hiker planner'/>,
+                headerTitle: () => <Header navigation={navigation} />,
             }
         }
     },
@@ -34,7 +35,7 @@ const screens = {
         screen: Home,
         navigationOptions: ({ navigation }) => {
             return {
-                headerTitle: () => <Header navigation={navigation} title='Hiking places'/>,
+                headerTitle: () => <Header navigation={navigation} title="Hiking places"/>,
                 //headerLeft: null,
                 
             }
@@ -43,14 +44,14 @@ const screens = {
     ReviewDetails:{
         screen: ReviewDetails,
         navigationOptions: {
-            title: 'Review Details',
+            title:"Hiking places" ,
         }
     },
     Map:{
         screen: Map,
         navigationOptions: ({ navigation }) => {
             return {
-                headerTitle: () => <Header navigation={navigation} title='Map'/>,
+                headerTitle: () => <Header navigation={navigation} title="Map"/>,
                 //headerLeft: null,
             }
         }
@@ -73,7 +74,7 @@ const screens = {
 const HomeStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
         headerTintColor: '#fff',
-        headerStyle: {backgroundColor: '#499567', height: 80},
+        headerStyle: {backgroundColor: '#47C799', height: 80},
     }
 });
 

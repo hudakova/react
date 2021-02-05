@@ -1,0 +1,14 @@
+{
+    "translation": {
+        "Welcome":"Welcome",
+        "Hiker planner" :"Hiker planner" ,
+        "Map": "Map",
+        "Where to go":"Where to go",
+        "Visited places":"Visited places",
+        "Hiking places":"Hiking places",
+        "new place" :"new place" ,
+        "ADD" :"ADD" ,
+        "word must be over 3 chars long":"word must be over 3 chars long",
+        "Understood":"Understood"
+      }
+    }

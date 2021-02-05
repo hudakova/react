@@ -8,7 +8,7 @@ const screens ={
         screen: Login,
         navigationOptions: ({ navigation }) => {
             return{
-                buttonTitle: () => <Button navigation={navigation} title='Turista'/>,
+                buttonTitle: () => <Button navigation={navigation} title='Hiker planner'/>,
             }
         }
     },

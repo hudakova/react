@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
         marginTop: 16,
         borderColor: '#bbb',
         borderWidth: 1,
-        borderStyle: 'dashed',
+        borderStyle: 'dotted',
         borderRadius: 10,
+        color: '#000000'
     }
 })
