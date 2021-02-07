@@ -7,6 +7,7 @@ import Login from '../screens/login';
 import Choose from '../screens/choose';
 import About from '../screens/about';
 import Map from '../screens/map';
+
 //import { Left } from 'native-base';
 
 
@@ -47,6 +48,8 @@ const screens = {
             title:"Hiking places" ,
         }
     },
+   
+
     Map:{
         screen: Map,
         navigationOptions: ({ navigation }) => {

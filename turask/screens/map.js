@@ -2,17 +2,25 @@ import React, { useState } from "react";
 import MapView from "react-native-maps";
 import { StyleSheet, Dimensions } from "react-native";
 import MapViewDirections from 'react-native-maps-directions';
+import {getDistance, getPreciseDistance} from 'geolib';
 
 
 export default function Map() {
   const origin = {latitude: 49.166440282228955, longitude: 20.13141653100582};
   const destination = {latitude: 37.771707, longitude: -122.4053769};
-  const GOOGLE_MAPS_APIKEY = 'AIzaSyCo5wljrXiQIk7zcOO3p4fTWkwjDA3LA1k';
+  const GOOGLE_MAPS_APIKEY = 'AIzaSyBIwHX9Lrm1P1MDTCFe9GQAiVx6YxUPcbk';
   //var db = openDatabase({ name: 'UserDatabase.db' });
   const coordinates = [
     {latitude: 49.166440282228955, longitude: 20.13141653100582},
     {latitude: 48.779937889116475, longitude:18.577838319747922 }
   ]
+
+  const calculateDistance = () => {
+    var dis = getDistance(
+      {latitude: 20.0504188, longitude: 64.4139099},
+      {latitude: 51.528308, longitude: -0.3817765},
+    );}
+    
 
   const [location, setLocation] = useState({
     initialPosition: {

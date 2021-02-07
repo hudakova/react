@@ -1,9 +1,14 @@
 import React from 'react';
 import { StyleSheet, View, Text,  TouchableOpacity} from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
 import "../components/i18n"
+//import DrawerLayout from 'react-native-gesture-handler/DrawerLayout';
+
+
 
 export default function Choose({navigation}){
+    
     const { t, i18n } = useTranslation();
     
     const pressHandler1 = () => {
@@ -15,11 +20,15 @@ export default function Choose({navigation}){
     const pressHandler3 = () => {
         navigation.navigate('About');
     }
-    
+    // const openMenu = () => {
+    //     navigation.openDrawer(DrawerLayout);
+    //  }
     return(
         
         <View style={styles.cont1}>
+          
             <View style={styles.header}>
+                {/* <MaterialIcons name="menu" size={28} onPress={openMenu} style={styles.icon} /> */}
                 <Text style={styles.headerText}>Hiker planner</Text>
             </View>
             <View style={styles.underline}>
@@ -47,6 +56,7 @@ export default function Choose({navigation}){
                 </TouchableOpacity> 
 
                 <Text style={styles.text}>{t("Plan out your hiking tour.")}</Text>
+                
             </View>
         </View>
         )
@@ -121,8 +131,15 @@ const styles = StyleSheet.create({
         fontSize: 25,
         color: '#fff',
         letterSpacing: 1,
-        marginLeft: 25,
+        marginLeft: 60,
         
+    },
+    icon:{
+        position: 'absolute',
+        left: 0,
+        marginTop: 35,
+        marginLeft: 15,
+        color: '#3A3F49',
     },
     text:{
         color:'#fff',
@@ -132,6 +149,7 @@ const styles = StyleSheet.create({
     underline:{
         backgroundColor:"#FFC48E",
         height: 10,
-    }
+    },
+    
 });
 
